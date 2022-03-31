@@ -59,11 +59,6 @@ class Blockchain:
         }
         self.pending_transactions.append(transaction)
 
-    def proof_of_work(self,block,previous_proof):
-        new_proof=1
-        check_proof=False
-        while check_proof is False:
-
     def hash(self,block):
 
         #Dumps the string into an json Object
