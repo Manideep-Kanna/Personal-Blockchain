@@ -146,6 +146,15 @@ def mine_block():
     }
     return jsonify(response)
 
+@app.route('/is_valid',methods=['GET'])
+def is_valid():
+    flag=blockchain.is_valid_chain()
+    if flag:
+        return jsonify({"message":"The Following chain is valid"})
+    else:
+        jsonify({"message":"The Following chain is not valid"})
+
+
 app.run(debug=True)
 
 
